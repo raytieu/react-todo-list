@@ -28,6 +28,14 @@ function App() {
         break;
     }
   };
+  //Save to Local Storage
+  const saveLocalTodos = () => {
+    if (localStorage.getItem("todos" === null)) {
+      localStorage.setItem("todos", JSON.stringify([]));
+    } else {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
+  };
   return (
     <div className="App">
       <header>
